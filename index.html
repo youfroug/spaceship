@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Shooter Game</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial;
+        background: black;
+      }
+      #gameCanvas {
+        background-color: black;
+        display: block;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="hudContainer"
+      style="position: relative; width: 1024px; height: 576px; margin: auto"
+    >
+      <p
+        id="scoreDisplay"
+        style="
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          color: white;
+          font-family: sans-serif;
+          font-size: 18px;
+          margin: 0;
+          z-index: 10;
+        "
+      >
+        Score: <span id="scoreEl">0</span>
+      </p>
+
+      <p
+        id="livesDisplay"
+        style="
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          color: white;
+          font-size: 18px;
+          margin: 0;
+          z-index: 10;
+        "
+      >
+        Lives: <span id="livesEl">3</span>
+      </p>
+
+      <p
+        id="shieldDisplay"
+        style="
+          position: absolute;
+          top: 40px;
+          right: 10px;
+          color: cyan;
+          font-size: 18px;
+          margin: 0;
+          z-index: 10;
+        "
+      >
+        Shield: <span id="shieldEl">OFF</span>
+      </p>
+
+      <div
+        id="mainMenu"
+        style="
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: black;
+          color: white;
+          font-size: 32px;
+          z-index: 20;
+        "
+      >
+        <h1 style="margin-bottom: 20px">SPACE SHOOTER</h1>
+        <button
+          id="startButton"
+          style="
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+          "
+        >
+          Start Game
+        </button>
+      </div>
+      <canvas id="gameCanvas" width="1024" height="576"></canvas>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
