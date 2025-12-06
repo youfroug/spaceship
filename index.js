@@ -353,6 +353,11 @@ function init() {
   }
 
   const player = new Player();
+  setInterval(() => {
+    if (game.active && !game.over && player.ready) {
+      shootProjectile();
+    }
+  }, 200);
 
   for (let i = 0; i < 100; i++) {
     particles.push(
